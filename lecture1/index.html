@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="apple-touch-icon" href="appicon.png" />
+		<link rel="apple-touch-startup-image" href="startup.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-webapp-status-bar-style" content=”black" />
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
 		<title>Super cool page yeah</title>
 	</head>
 	
@@ -12,13 +17,40 @@
 		h2 {
 			font-size:22px;
 			font-weight:300;
-			color:#aaa;
+			color:#550099;
+		}
+		
+		#cont {
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			left: 50%;
+			margin-left: -250px;
+			background-color: #cc99ff;
+			padding: 20px;
+			border: 1px solid #000;
+			border-radius: 20px;
+			overflow: scroll;
+		}
+		
+		a:link {
+			text-decoration: none;
+			color: #555;
+		}
+		a:hover {
+			color: #000;
+			text-decoration: underline;
+		}
+		
+		.translucent-hover:hover {
+			opacity: 0.5;
+			cursor: pointer;
 		}
 	</style>
 	
-	<body>
+	<body><div id="cont">
 	 		<h2>Jessica Kungkungkung</h2>
-		<div id='bio'>Crime-solver. Noir detective extraordinaire.</div>
+		<div id='bio'>Food nom nom nom.</div>
 	 
 	 	<h3>Assignments</h3>
 		<ul id='assignments'>
@@ -26,13 +58,19 @@
 			<li>Learn HTML</li>
 		</ul>
 	
-		<h3>A nice button</h3>
+		<p>
+			<img class="translucent-hover" src="http://cdn-www.dailypuppy.com/media/dogs/anonymous/Teddy_Welsh_Corgi_01.jpg_w450.jpg"/>
+		</p>
 
-		<h3>An invisible seal</h3>
+		<a href="http://www.dabblet.com"><h3>Dabblet.com is cool</h3></a>
 
 		<h3>A video</h3>
 
 		<h3>Two boxes side by side</h3>
 
-	</body>
+		<video width="300" height="240" controls="controls">
+		  <source src="gizmo.mp4" type="video/mp4" />
+		</video>
+		
+	</div></body>
 </html>
