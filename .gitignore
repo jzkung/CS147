@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .DS_Store?
 ._*
@@ -7,3 +8,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 config.php
+=======
+/nbproject/private/
+>>>>>>> 3a67779e257c41538bc3a62ee12eb6f15081fae9
