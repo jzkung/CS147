@@ -129,53 +129,7 @@
 		    
 		    var renderer;
 		    google.maps.event.addListener(map, 'click', function (event) {
-		        if (!wayA) {
-		        	// If a direction has been set, 
-		        	// remove it.
-		        	if (renderer) {
-		        		renderer.setMap(null);
-		        	}
-		            wayA = new google.maps.Marker({
-		
-		                position: event.latLng,
-		                map: map
-		
-		            });
-		        } else {
-		            wayB = new google.maps.Marker({
-		
-		                position: event.latLng,
-		                map: map
-		
-		            });
-					 
-		            // Directions
-		            renderer = new google.maps.DirectionsRenderer({
-		                'draggable': true
-		            });
-		            renderer.setMap(map);
-		
-					// Uncomment the following to add a directions pane
-		            //ren.setPanel(document.getElementById("directionsPanel"));
-		            service = new google.maps.DirectionsService();
-		
-		            service.route({
-		                'origin': wayA.getPosition(),
-		                'destination': wayB.getPosition(),
-		                'travelMode': google.maps.DirectionsTravelMode.DRIVING
-		            }, function (result, status) {
-		            	
-		            	console.log("The route between the two points is");
-		            	debug = result;
-		    			console.log(debug);
-		    			
-		                if (status == 'OK') renderer.setDirections(result);
-		                	wayA.setMap(null);
-				            wayA = null;
-				            wayB.setMap(null);
-				            wayB = null;
-		            })
-		        }
+				var marker = createMarker(event.latLng, 'myName', 'Location ' + event.latLng);
 		    });
 		}
 		
